@@ -1,0 +1,22 @@
+
+- name: postgresql
+  src: https://github.com/klewan/ansible-role-postgresql.git
+  scm: git
+  #version: develop
+  #version: feature/init
+  #version: master
+
+- name: postgresql-host-cron
+  src: https://github.com/klewan/ansible-role-postgresql-host-cron.git
+  scm: git
+  #version: develop
+  #version: feature/init
+  #version: master
+
+- name: postgresql-nsr-backup
+  src: https://github.com/klewan/ansible-role-postgresql-nsr-backup.git
+  scm: git
+  #version: develop
+  #version: feature/init
+  #version: master
+

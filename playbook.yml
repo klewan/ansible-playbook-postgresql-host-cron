@@ -1,0 +1,17 @@
+---
+- name: Configure PostgreSQL database server cron
+  hosts: pg-servers
+  become: true
+  become_user: '{{ postgresql_user }}'
+
+  tasks:
+
+  - import_role:
+      name: postgresql-host-cron
+    vars:
+      postgresql_host_cron_copy_scripts: true
+      postgresql_host_cron_disable_jobs: false
+      postgresql_host_cron_manage_cron_jobs: true
+    tags:
+      - postgresql_host_cron
+
